@@ -1,0 +1,25 @@
+
+    <h2><a [routerLink]="['/welcome']"  [routerLinkActive]="['link-active']">Welcome</a></h2>
+    <h2><a [routerLink]="['/product']"  [routerLinkActive]="['link-active']">product list</a></h2>
+    
+
+    <h2><a [routerLink]="['/user']"  [routerLinkActive]="['link-active']">user</a></h2>
+
+    <h2><a [routerLink]="['/user',1]"  [routerLinkActive]="['link-active']">user no 1</a></h2>
+    <h2><a [routerLink]="['/user',2]"  [routerLinkActive]="['link-active']">user no 2</a></h2>
+    <h2><a [routerLink]="['/user',3]"  [routerLinkActive]="['link-active']">user no 3</a></h2>
+
+    <h2><a [routerLink]="['/search',{name:searchUserName,title:searchUserTitle,location:searchUserLocation}]"  [routerLinkActive]="['link-active']">optional parameter</a></h2>
+    <h2><a [routerLink]="['/search']" 
+           [queryParams]= "{name:searchUserName,title:searchUserTitle,location:searchUserLocation}"
+           [queryParamsHandling]="preserve"
+      [routerLinkActive]="['link-active']">query params</a></h2>
+<div>
+  <p>
+    ----------------------------------------
+  </p>
+    <router-outlet></router-outlet>
+    <p>
+        ----------------------------------------
+      </p>
+</div>
